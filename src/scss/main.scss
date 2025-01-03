@@ -1,0 +1,25 @@
+.main {
+  border: var(--main-border);
+  padding: var(--layout-padding);
+
+
+  display: flex;
+
+
+  min-height: var(--min-h-section);
+  transform: translateY(-50px);
+
+  &__left {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+
+    padding: var(--layout-padding);
+  }
+
+
+  &__right {
+    flex: 1;
+    background-color: blue;
+  }
+}

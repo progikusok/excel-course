@@ -1,0 +1,19 @@
+.header {
+  position: sticky;
+  top: 0;
+
+  border: var(--main-border);
+  background: var(--background);
+  padding: var(--layout-padding);
+
+  min-height: 50px;
+
+  z-index: 10;
+
+  &__menu {
+    display: flex;
+    gap: 10px;
+
+  }
+
+}

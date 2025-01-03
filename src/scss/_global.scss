@@ -1,14 +1,10 @@
-html {
-	font-size: 8px;
-	@include viewport-md {
-		font-size: 10px;
-	}
-}
 body {
-	font-family: 'Montserrat';
-	background: var(--main-color);
-	color: var(--main-text-color);
-	font-size: 2.4rem;
+	font-family: 'menoa';
+	background: var(--background);
+	color: var(--text);
 	transition: background .2s ease, color .2s ease;
 }
 
+h1 {
+	font-size: 2rem;
+}

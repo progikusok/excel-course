@@ -3,3 +3,11 @@
 @import 'vars';
 @import 'mixins';
 @import 'global';
+@import 'main';
+@import 'header';
+
+body {
+  padding: 10px;
+
+  height: 2000px;
+}
