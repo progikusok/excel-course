@@ -1,3 +1,3 @@
-import '../scss/style.scss'
-import switchThemeColor from './localstaradge.js'
-switchThemeColor()
+import "../scss/style.scss";
+import switchThemeColor from "./local-storage.js";
+switchThemeColor();
