@@ -5,9 +5,11 @@
 @import 'global';
 @import 'main';
 @import 'header';
+@import 'intro';
+@import 'causes';
 
 body {
   padding: 10px;
 
-  height: 2000px;
+  min-height: 4000px;
 }

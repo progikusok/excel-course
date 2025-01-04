@@ -1,0 +1,42 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en,ru,en-GB,lorem,en-US",
+  "ignoreRegExpList": [
+    "CStyleComment"
+  ],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/assets/**",
+    "**/dist/**",
+    "**/index.html",
+    "*.xml",
+    "*.svg",
+    "*.shader.ts",
+    "cspell.local-terms.txt",
+    "cspell.json",
+    "*.{log,svg,snap,png,ogv,yml}",
+    "**-colors.config.json"
+  ],
+  "dictionaries": [
+    "en_us",
+    "en-gb",
+    "typescript",
+    "node",
+    "css",
+    "html",
+    "bash",
+    "softwareTerms",
+    "localTerms",
+    "ru-ru"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "localTerms",
+      "description": "Netmonet local terms",
+      "path": "./cspell.local-terms.txt"
+    }
+  ],
+  "useGitignore": true,
+  "import": ["@cspell/dict-ru_ru/cspell-ext.json"],
+}

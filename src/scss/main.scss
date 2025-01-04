@@ -1,25 +1,32 @@
 .main {
   border: var(--main-border);
-  padding: var(--layout-padding);
+  // border-top: none;
 
 
   display: flex;
 
 
-  min-height: var(--min-h-section);
-  transform: translateY(-50px);
+  min-height: calc(var(--min-h-section) - 10px);
 
   &__left {
     flex: 1;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
 
-    padding: var(--layout-padding);
+    gap: 70px;
+
+    padding: calc(var(--layout-padding) * 3);
   }
 
 
   &__right {
     flex: 1;
-    background-color: blue;
+    background-color: var(--excel);
+    background-image:
+      repeating-linear-gradient(#000 0 1px, transparent 1px 100%),
+      repeating-linear-gradient(90deg, #000 0 1px, transparent 1px 100%);
+    background-size: 71px 71px;
   }
 }

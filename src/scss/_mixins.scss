@@ -9,3 +9,36 @@
 	background-clip: text;
 	color: transparent;
 }
+
+@mixin hover() {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin excel-cell {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    inset: -2px;
+    content: '';
+    border: var(--main-border);
+    border-width: 3px;
+    border-color: var(--excel);
+    pointer-events: none;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: -4px;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--background);
+    background-color: var(--excel);
+  }
+}

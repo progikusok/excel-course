@@ -1,0 +1,27 @@
+.intro {
+  border: var(--main-border);
+  border-top: none;
+
+  font-size: 34px;
+  padding: var(--layout-padding);
+
+  display: flex;
+  align-items: center;
+
+  min-height: 400px;
+  padding-right: 30%;
+  padding-left: 30px;
+
+  position: sticky;
+  top: 0;
+
+
+  .special-cell {
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    @include excel-cell;
+  }
+}

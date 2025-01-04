@@ -4,7 +4,9 @@
 
   border: var(--main-border);
   background: var(--background);
-  padding: var(--layout-padding);
+  // padding: var(--layout-padding);
+
+  display: flex;
 
   min-height: 50px;
 
@@ -12,8 +14,37 @@
 
   &__menu {
     display: flex;
-    gap: 10px;
-
   }
 
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__text {
+    transition: color .2s ease;
+    opacity: 1;
+  }
+
+  &__item {
+    height: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-right: var(--main-border);
+    position: relative;
+    cursor: pointer;
+
+    @include hover() {
+      .menu__text {
+        opacity: 0.5;
+      }
+    }
+
+    &.active {
+      @include excel-cell;
+    }
+  }
 }

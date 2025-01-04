@@ -3,8 +3,35 @@ body {
 	background: var(--background);
 	color: var(--text);
 	transition: background .2s ease, color .2s ease;
+
 }
 
 h1 {
+	font-size: 3rem;
+}
+
+h3 {
 	font-size: 2rem;
+}
+
+button {
+	padding: 15px 30px;
+	width: fit-content;
+
+	transition: .2s opacity ease, .2s scale ease;
+	cursor: pointer;
+
+	@include hover() {
+		opacity: 0.9;
+	}
+
+	&.primary {
+		background: var(--excel);
+		color: white;
+	}
+
+	&:active {
+		scale: 0.95;
+		opacity: 1;
+	}
 }

@@ -1,0 +1,33 @@
+.causes {
+  // border: var(--main-border);
+  // border-top: none;
+
+  padding: var(--layout-padding);
+
+  display: flex;
+  align-items: center;
+
+  min-height: 400px;
+  padding-left: 30px;
+
+  position: sticky;
+  top: 0;
+
+  background-color: var(--background);
+
+
+  h3 {
+    font-size: 60px;
+  }
+
+  &__left {
+    display: flex;
+    flex: 1;
+  }
+
+  &__right {
+    display: flex;
+    flex: 1;
+  }
+
+}
