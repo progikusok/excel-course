@@ -1,15 +1,22 @@
-@import 'fonts';
-@import 'reset';
-@import 'vars';
-@import 'mixins';
-@import 'global';
-@import 'main';
-@import 'header';
-@import 'intro';
-@import 'causes';
+@import "fonts";
+@import "reset";
+@import "vars";
+@import "mixins";
+@import "global";
+@import "main";
+@import "header";
+@import "intro";
+@import "causes";
+@import "tasks";
 
 body {
-  padding: 10px;
+  min-height: 10000px;
+}
 
-  min-height: 4000px;
+.special-cell {
+  display: inline-block;
+
+  padding: 10px 20px;
+
+  @include excel-cell;
 }

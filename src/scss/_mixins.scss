@@ -5,9 +5,9 @@
 }
 
 @mixin text-gradient {
-	background: var(--hero-name-background);
-	background-clip: text;
-	color: transparent;
+  background: var(--hero-name-background);
+  background-clip: text;
+  color: transparent;
 }
 
 @mixin hover() {
@@ -20,11 +20,12 @@
 
 @mixin excel-cell {
   position: relative;
+  width: fit-content;
 
   &::before {
     position: absolute;
     inset: -2px;
-    content: '';
+    content: "";
     border: var(--main-border);
     border-width: 3px;
     border-color: var(--excel);
@@ -33,7 +34,7 @@
 
   &::after {
     position: absolute;
-    content: '';
+    content: "";
     bottom: -4px;
     right: -4px;
     width: 8px;

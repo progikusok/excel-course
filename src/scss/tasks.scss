@@ -1,0 +1,131 @@
+.tasks {
+  padding: var(--layout-padding);
+
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+  min-height: 400px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  background-color: var(--background);
+
+  padding-top: 90px;
+  padding-bottom: 90px;
+  position: relative;
+  z-index: 2;
+
+  h3 {
+    font-size: 60px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+    position: sticky;
+    top: 90px;
+  }
+
+  &__right {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__cards {
+    --numcards: 5;
+    view-timeline-name: --cards-element-scrolls-in-body;
+
+    flex: 0 1 50%;
+    padding-top: 400px;
+    height: max-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--numcards), 1fr);
+    row-gap: 40px;
+  }
+
+  &__card {
+    transform-origin: 50% 0;
+    will-change: transform;
+    overflow: hidden;
+
+    min-height: 500px;
+    --index0: calc(var(--index) - 1);
+    --reverse-index: calc(var(--numcards) - var(--index0));
+    --reverse-index0: calc(var(--reverse-index) - 1);
+
+    --start-range: calc(var(--index0) / var(--numcards) * 100%);
+    --end-range: calc((var(--index)) / var(--numcards) * 100%);
+    animation: linear scale forwards;
+    animation-timeline: --cards-element-scrolls-in-body;
+    animation-range: exit-crossing var(--start-range) exit-crossing var(--end-range);
+
+    &.card-1 {
+      position: sticky;
+      top: -350px;
+      z-index: 1;
+      --index: 1;
+    }
+
+    &.card-2 {
+      position: sticky;
+      top: -300px;
+      z-index: 2;
+      --index: 2;
+    }
+
+    &.card-3 {
+      position: sticky;
+      top: -250px;
+      z-index: 3;
+      --index: 3;
+    }
+
+    &.card-4 {
+      position: sticky;
+      top: -200px;
+      z-index: 4;
+      --index: 4;
+    }
+
+    &.card-5 {
+      position: sticky;
+      top: -150px;
+      z-index: 5;
+      --index: 5;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 40px 20px;
+  gap: 20px;
+  border: var(--main-border);
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    transform: translate(-10px, -10px);
+    background-color: var(--excel);
+    background-color: var(--background);
+    z-index: -1;
+  }
+
+  &__title {
+    font-size: 40px;
+  }
+}
+
+@keyframes scale {
+  to {
+    transform: scale(calc(1.1 - calc(0.1 * var(--reverse-index))));
+  }
+}

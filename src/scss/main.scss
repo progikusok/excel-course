@@ -1,7 +1,7 @@
 .main {
   border: var(--main-border);
-  // border-top: none;
-
+  margin: var(--layout-padding);
+  margin-bottom: 0;
 
   display: flex;
 

@@ -1,20 +1,32 @@
 .causes {
-  // border: var(--main-border);
-  // border-top: none;
-
   padding: var(--layout-padding);
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  gap: 20px;
 
   min-height: 400px;
   padding-left: 30px;
-
-  position: sticky;
-  top: 0;
+  padding-right: 30px;
 
   background-color: var(--background);
 
+  padding-top: 90px;
+  padding-bottom: 90px;
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-size: 109px;
+    background-repeat: repeat;
+    background-image: url("src/img/noise.png");
+    opacity: 0.06;
+  }
 
   h3 {
     font-size: 60px;
@@ -22,12 +34,37 @@
 
   &__left {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     flex: 1;
+    position: sticky;
+    top: 90px;
   }
 
   &__right {
     display: flex;
     flex: 1;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
   }
 
+  &__item {
+    display: flex;
+    border-bottom: 1px solid #000;
+  }
+
+  &__number {
+    width: 80px;
+  }
+
+  &__answer {
+    width: 80%;
+    padding-bottom: 16px;
+  }
+
+  &__title {
+    font-size: 32px;
+    padding-bottom: 16px;
+  }
 }
