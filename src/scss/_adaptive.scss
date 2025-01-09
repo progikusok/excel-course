@@ -1,0 +1,125 @@
+/** 
+#################################################### HEIGHT ####################################################
+*/
+
+@function calc-between-height($height-start, $value-start, $height-end, $value-end, $unit) {
+  @return calc(
+    #{$value-start} * #{$unit} + (#{$value-end} - #{$value-start}) * (100vh - #{$height-start} * 1px) /
+      (#{$height-end} - #{$height-start})
+  );
+}
+
+@mixin height-between($min-height, $max-height) {
+  $max-height: $max-height - 1;
+  $min-height: $min-height;
+
+  @media (min-height: #{$min-height * 1px}) and (max-height: #{$max-height * 1px}) {
+    @content;
+  }
+}
+
+@mixin height-less-than($height) {
+  $height: $height - 1;
+
+  @media (max-height: #{$height * 1px}) {
+    @content;
+  }
+}
+
+@mixin height-more-than($height) {
+  $height: $height - 1;
+
+  @media (min-height: #{$height * 1px}) {
+    @content;
+  }
+}
+
+@mixin height-between-property(
+  $property,
+  $height-start,
+  $value-start,
+  $height-end,
+  $value-end,
+  $is-save-height-before: false,
+  $is-save-height-after: false,
+  $unit: 1px
+) {
+  @include height-between($height-start, $height-end) {
+    #{$property}: calc-between-height($height-start, $value-start, $height-end, $value-end, $unit);
+  }
+
+  @if $is-save-height-before {
+    @include height-less-than($height-start) {
+      #{$property}: $value-start * $unit;
+    }
+  }
+
+  @if $is-save-height-after {
+    @include height-more-than($height-end) {
+      #{$property}: $value-end * $unit;
+    }
+  }
+}
+
+/** 
+#################################################### WIDTH ####################################################
+*/
+
+@function calc-between-width($width-start, $value-start, $width-end, $value-end, $unit) {
+  @return calc(
+    #{$value-start} * #{$unit} + (#{$value-end} - #{$value-start}) * (100vw - #{$width-start} * 1px) /
+      (#{$width-end} - #{$width-start})
+  );
+}
+
+@mixin width-between($min-width, $max-width) {
+  $max-width: $max-width - 1;
+  $min-width: $min-width;
+
+  @media (min-width: #{$min-width * 1px}) and (max-width: #{$max-width * 1px}) {
+    @content;
+  }
+}
+
+@mixin width-less-than($width) {
+  $width: $width - 1;
+
+  @media (max-width: #{$width * 1px}) {
+    @content;
+  }
+}
+
+@mixin width-more-than($width) {
+  $width: $width;
+
+  @media (min-width: #{$width * 1px}) {
+    @content;
+  }
+}
+
+@mixin width-between-property(
+  $property,
+  $width-start,
+  $value-start,
+  $width-end,
+  $value-end,
+  $is-save-width-before: false,
+  $is-save-width-after: false,
+  $unit: 1px
+) {
+  @include width-between($width-start, $width-end) {
+    #{$property}: calc-between-width($width-start, $value-start, $width-end, $value-end, $unit);
+  }
+
+  @if $is-save-width-before {
+    @include width-less-than($width-start) {
+      #{$property}: $value-start * $unit;
+    }
+  }
+
+  @if $is-save-width-after {
+    @include width-more-than($width-end) {
+      #{$property}: $value-end * $unit;
+    }
+  }
+}

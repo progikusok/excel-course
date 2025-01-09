@@ -43,3 +43,81 @@
     background-color: var(--excel);
   }
 }
+
+@mixin paper-background {
+  position: relative;
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-size: 109px;
+    background-repeat: repeat;
+    background-image: url("src/img/noise.png");
+    opacity: 0.06;
+  }
+}
+
+@mixin host-selector($selector) {
+  :host-context(#{$selector}) & {
+    @content;
+  }
+}
+
+@mixin class-parent($parent-class: ".dark") {
+  &#{$parent-class},
+  #{$parent-class} & {
+    @content;
+  }
+}
+
+@mixin apply-inverted() {
+  @include class-parent() {
+    --background: var(--background-invert);
+    --text: var(--text-invert);
+  }
+}
+
+// typograpgy
+
+@mixin h1 {
+  font-size: var(--heading-h1);
+  line-height: inherit;
+}
+
+@mixin h2 {
+  font-size: var(--heading-h2);
+  line-height: inherit;
+}
+
+@mixin h3 {
+  font-size: var(--heading-h3);
+  line-height: inherit;
+}
+
+@mixin h4 {
+  font-size: var(--heading-h4);
+  line-height: inherit;
+}
+
+@mixin h5 {
+  font-size: var(--heading-h5);
+  line-height: inherit;
+}
+
+@mixin h6 {
+  font-size: var(--heading-h6);
+  line-height: inherit;
+}
+
+@mixin base-text {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+@mixin small-text {
+  font-size: var(--small-text);
+  line-height: 1.4;
+}

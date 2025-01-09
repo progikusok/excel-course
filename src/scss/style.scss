@@ -2,12 +2,17 @@
 @import "reset";
 @import "vars";
 @import "mixins";
+@import "adaptive";
 @import "global";
 @import "main";
 @import "header";
 @import "intro";
 @import "causes";
 @import "tasks";
+
+html {
+  @include width-between-property(font-size, 1440, 16, 2560, 28, true, true);
+}
 
 body {
   min-height: 10000px;

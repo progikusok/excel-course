@@ -1,18 +1,32 @@
 :root {
-	--background: #fff;
+	--background: #f7f7f7;
 	--text: #000;
 
+	--background-invert: #000;
+	--text-invert: #f7f7f7;
+
 	--layout-padding: 10px;
-	--min-h-section: calc(100vh - var(--layout-padding)*2);
+	--min-h-section: calc(100vh - var(--layout-padding) * 2);
 	--main-border: 2px solid #000;
 	--excel: green;
 
 	--main-color: #1e1e20;
 	--second-color: #161618;
 	--mute-color: #313136;
-	--main-text-color: rgba(255, 255, 245, .86);
-	--second-text-color: rgba(235, 235, 245, .6);
+	--main-text-color: rgba(255, 255, 245, 0.86);
+	--second-text-color: rgba(235, 235, 245, 0.6);
 	--hero-name-background: linear-gradient(120deg, #bd34fe 30%, #41d1ff);
 	--brand-color: #646cff;
 	--brand-light-color: #747bff;
+
+	// typography
+	--heading-h1: 2.986rem; // 47.78px
+	--heading-h2: 2.488rem; // 39.81px
+	--heading-h3: 2.074rem; // 33.18px
+	--heading-h4: 1.728rem; // 27.65px
+	--heading-h5: 1.44rem; // 23.04px
+	--heading-h6: 1.2rem; // 19.2px
+
+	--small-text: 0.8rem;
+	--large-text: 2.074rem;
 }

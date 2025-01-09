@@ -1,24 +1,56 @@
+html,
 body {
-	font-family: 'menoa';
+	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Arial, sans-serif;
+}
+
+body {
+	font-family: "menoa";
 	background: var(--background);
 	color: var(--text);
-	transition: background .2s ease, color .2s ease;
 
+	@include base-text;
+	line-height: 1.4;
+
+	transition:
+		background 0.2s ease,
+		color 0.2s ease;
 }
 
 h1 {
-	font-size: 3rem;
+	@include h1;
+}
+
+h2 {
+	@include h2;
 }
 
 h3 {
-	font-size: 2rem;
+	@include h3;
+}
+
+h4 {
+	@include h4;
+}
+
+h5 {
+	@include h5;
+}
+
+h6 {
+	@include h6;
+}
+
+p {
+	@include base-text;
 }
 
 button {
 	padding: 15px 30px;
 	width: fit-content;
 
-	transition: .2s opacity ease, .2s scale ease;
+	transition:
+		0.2s opacity ease,
+		0.2s scale ease;
 	cursor: pointer;
 
 	@include hover() {
