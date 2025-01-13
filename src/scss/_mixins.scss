@@ -66,15 +66,21 @@
   }
 }
 
-@mixin class-parent($parent-class: ".dark") {
+@mixin class-parent($parent-class) {
   &#{$parent-class},
   #{$parent-class} & {
     @content;
   }
 }
 
+@mixin dark-class-parent($parent-class: ".dark") {
+  @include class-parent($parent-class) {
+    @content;
+  }
+}
+
 @mixin apply-inverted() {
-  @include class-parent() {
+  @include dark-class-parent() {
     --background: var(--background-invert);
     --text: var(--text-invert);
   }

@@ -19,6 +19,12 @@
 
   @include paper-background;
 
+  @include dark-class-parent() {
+    &::before {
+      opacity: 0.16;
+    }
+  }
+
   &__left {
     display: flex;
     flex-direction: column;
@@ -46,6 +52,7 @@
     &::after {
       position: absolute;
       inset: 0;
+      filter: invert(1);
       background-color: var(--background);
       content: "";
       will-change: transform;
