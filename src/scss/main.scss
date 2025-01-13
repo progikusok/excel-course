@@ -5,8 +5,9 @@
 
   display: flex;
 
-
   min-height: calc(var(--min-h-section) - 10px);
+
+  position: relative;
 
   &__left {
     flex: 1;
@@ -18,15 +19,95 @@
     gap: 70px;
 
     padding: calc(var(--layout-padding) * 3);
+    position: relative;
   }
 
+  &__title {
+    color: var(--text-invert);
+    mix-blend-mode: exclusion;
+  }
 
   &__right {
     flex: 1;
-    background-color: var(--excel);
-    background-image:
-      repeating-linear-gradient(#000 0 1px, transparent 1px 100%),
-      repeating-linear-gradient(90deg, #000 0 1px, transparent 1px 100%);
-    background-size: 71px 71px;
+    // background-color: var(--excel);
+    // background-image:
+    //   repeating-linear-gradient(#000 0 1px, transparent 1px 100%),
+    //   repeating-linear-gradient(90deg, #000 0 1px, transparent 1px 100%);
+
+    // background-size: 71px 71px;
+
+    position: relative;
+
+    // &::before {
+    //   --grid-gap: 2px;
+    //   --grid-size: calc(var(--cell-size) * 1px);
+
+    //   position: absolute;
+    //   inset: 0;
+    //   content: "";
+    //   opacity: 0.3;
+
+    //   background-image: linear-gradient(to right, #000 var(--grid-gap), transparent var(--grid-gap)),
+    //     linear-gradient(to bottom, #000 var(--grid-gap), transparent var(--grid-gap));
+    //   background-size: var(--grid-size) var(--grid-size);
+    // }
   }
+}
+
+.cursor {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.celled-block {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), calc(100vw / var(--columns)));
+
+  &__item {
+    width: calc(100vw / var(--columns));
+    aspect-ratio: 1;
+    display: block;
+    cursor: pointer;
+
+    background: green;
+    opacity: 0;
+
+    // background-color: green;
+    // opacity: 0;
+
+    transition: opacity 0.2s;
+    // // animation: bg 2s;
+
+    // // animation-play-state: paused;
+
+    // &:hover {
+    //   transition: opacity 0.1s;
+    //   opacity: 1;
+    //   animation: bg 2s 0.5s;
+    //   // animation-play-state: running;
+    // }
+  }
+}
+
+@keyframes bg {
+  100% {
+    opacity: 0;
+  }
+}
+
+.canvas-interaction-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot-canvas {
+  display: block;
+  width: 110%;
+  height: 110%;
 }
