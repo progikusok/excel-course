@@ -1,23 +1,28 @@
 .causes {
-  padding: var(--layout-padding);
+  padding: var(--inside-padding);
 
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  justify-content: center;
+  gap: 2rem;
 
   min-height: 400px;
-  padding-left: 30px;
-  padding-right: 30px;
 
   @include apply-inverted();
 
   background-color: var(--background);
   color: var(--text);
 
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 5.625rem;
+  padding-bottom: 5.625rem;
+
+  z-index: 4;
 
   @include paper-background;
+
+  @include width-less-than(1100) {
+    flex-direction: column;
+  }
 
   @include dark-class-parent() {
     &::before {
@@ -32,6 +37,10 @@
     flex: 1;
     position: sticky;
     top: 90px;
+
+    @include width-less-than(1100) {
+      position: static;
+    }
   }
 
   &__right {
@@ -70,9 +79,9 @@
   }
 
   &__number {
-    width: 80px;
+    width: 5rem;
     height: fit-content;
-    line-height: calc(var(--heading-h3));
+    line-height: calc(var(--heading-h4));
   }
 
   &__answer {
@@ -80,7 +89,7 @@
   }
 
   &__title {
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
   }
 
   &__description {

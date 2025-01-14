@@ -31,7 +31,7 @@ export class DotGrid {
 
   onMouseUpdate(e) {
     this.mouseX = e.pageX - this.drawable.left;
-    this.mouseY = e.pageY - this.drawable.top;
+    this.mouseY = e.pageY - this.drawable.top - window.scrollY;
     this.drawable = this.canvasElement.getBoundingClientRect();
 
     window.requestAnimationFrame(this.draw.bind(this));
@@ -41,7 +41,7 @@ export class DotGrid {
     window.requestAnimationFrame(this.draw.bind(this));
     // Listen for Mouse updates
     document.body.addEventListener(
-      "mousemove",
+      "pointermove",
       this.onMouseUpdate.bind(this),
       false
     );
@@ -69,6 +69,7 @@ export class DotGrid {
         let y = j * gridSize;
         let dist = this.calculateDistance(x, y, this.mouseX, this.mouseY);
         this.canvas.beginPath();
+
         this.canvas.arc(
           x + ((x - this.mouseX) / dist) * gridSize,
           y + ((y - this.mouseY) / dist) * gridSize,

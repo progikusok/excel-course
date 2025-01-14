@@ -1,57 +1,47 @@
 .main {
   border: var(--main-border);
   margin: var(--layout-padding);
+  padding: var(--inside-padding);
   margin-bottom: 0;
 
   display: flex;
+  flex-direction: column;
 
-  min-height: calc(var(--min-h-section) - 10px);
+  min-height: calc(var(--min-h-section) - var(--layout-padding));
 
   position: relative;
 
-  &__left {
+  &__content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    // align-items: center;
+    align-items: center;
     justify-content: center;
-
     gap: 70px;
-
-    padding: calc(var(--layout-padding) * 3);
     position: relative;
   }
 
   &__title {
-    color: var(--text-invert);
-    mix-blend-mode: exclusion;
+    // color: var(--text-invert);
+    // mix-blend-mode: exclusion;
+
+    padding: 0 var(--inside-padding);
+
+    @include width-less-than(600) {
+      font-size: 44px;
+    }
   }
 
-  &__right {
-    flex: 1;
-    // background-color: var(--excel);
-    // background-image:
-    //   repeating-linear-gradient(#000 0 1px, transparent 1px 100%),
-    //   repeating-linear-gradient(90deg, #000 0 1px, transparent 1px 100%);
-
-    // background-size: 71px 71px;
-
-    position: relative;
-
-    // &::before {
-    //   --grid-gap: 2px;
-    //   --grid-size: calc(var(--cell-size) * 1px);
-
-    //   position: absolute;
-    //   inset: 0;
-    //   content: "";
-    //   opacity: 0.3;
-
-    //   background-image: linear-gradient(to right, #000 var(--grid-gap), transparent var(--grid-gap)),
-    //     linear-gradient(to bottom, #000 var(--grid-gap), transparent var(--grid-gap));
-    //   background-size: var(--grid-size) var(--grid-size);
-    // }
+  &__description {
+    color: var(--excel);
+    background-color: var(--background);
+    // font-size: 16px;
   }
+}
+
+.svg-dots {
+  width: 100%;
+  height: 100%;
 }
 
 .cursor {

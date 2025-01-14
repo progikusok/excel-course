@@ -37,6 +37,7 @@ function produceCelledBlockLogic() {
 }
 
 import { GooCursor } from "./cursor.js";
+import { SvgSwitcher } from "./svg-switcher.js";
 
 const cursorEl = document.querySelector(".cursor");
 
@@ -81,8 +82,10 @@ function doMagic() {
     );
 }
 
-window.addEventListener("click", () => {
-  doMagic();
-});
+// window.addEventListener("click", () => {
+//   doMagic();
+// });
 
 new DotGrid("sketch").init();
+
+new SvgSwitcher("svg-switcher");

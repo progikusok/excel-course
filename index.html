@@ -5,6 +5,13 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Excel Course</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- <header class="header">
@@ -22,45 +29,39 @@
     </header> -->
 
     <section class="main">
-      <!-- <div class="cursor" style="--columns: 30">
-        <div class="celled-block"></div>
-      </div> -->
-
       <div class="canvas-interaction-wrapper">
         <canvas class="dot-canvas" id="sketch"></canvas>
       </div>
 
-      <div class="main__left">
-        <h1 class="main__title">Старт Excel легко<br />– с нуля до PRO</h1>
-
-        <button class="primary">Записаться на курс</button>
+      <div class="main__content">
+        <span class="main__description special-cell">Образовательный курс</span>
+        <h2 class="main__title">Старт Excel легко<br />– с нуля до PRO</h2>
+        <button class="primary">Записаться</button>
       </div>
-
-      <div class="main__right"></div>
     </section>
 
     <section class="intro">
-      <h3>
+      <h4>
         Excel — лучший инструмент для всех, кто не любит рутину. Он поможет
         автоматизировать работу и освободить время для более интересных
         <br />
         <span class="special-cell">задач</span>
-      </h3>
+      </h4>
     </section>
 
     <section class="causes dark">
       <div class="causes__left">
         <span class="special-cell">Важно знать</span>
-        <h2>
+        <h3>
           5 причин, <br />
           зачем вам этот курс
-        </h2>
+        </h3>
       </div>
       <div class="causes__right">
         <div class="causes__item">
           <div class="causes__number">01</div>
           <div class="causes__answer">
-            <h3 class="causes__title">Интерактивные задания</h3>
+            <h4 class="causes__title">Интерактивные задания</h4>
             <div class="causes__description">
               Ваше обучение будет сопровождаться множеством практических
               заданий, которые максимально вас погрузят в мир таблиц Excel.
@@ -71,9 +72,9 @@
         <div class="causes__item">
           <div class="causes__number">02</div>
           <div class="causes__answer">
-            <h3 class="causes__title">
+            <h4 class="causes__title">
               Получить преимущество при поиске работы
-            </h3>
+            </h4>
             <div class="causes__description">
               Excel используется в различных отраслях, включая финансы,
               маркетинг, аналитику и управление проектами. Владение Excel может
@@ -86,7 +87,7 @@
         <div class="causes__item">
           <div class="causes__number">03</div>
           <div class="causes__answer">
-            <h3 class="causes__title">Автоматизировать бытовые задачи</h3>
+            <h4 class="causes__title">Автоматизировать бытовые задачи</h4>
             <div class="causes__description">
               Excel позволяет выполнять не только профессиональные, но и
               повседневные задачи, такие как планирование семейного бюджета,
@@ -98,7 +99,7 @@
         <div class="causes__item">
           <div class="causes__number">04</div>
           <div class="causes__answer">
-            <h3 class="causes__title">Повысить продуктивность</h3>
+            <h4 class="causes__title">Повысить продуктивность</h4>
             <div class="causes__description">
               Умение эффективно использовать Excel позволяет автоматизировать
               процессы и ускорить выполнение задач
@@ -109,9 +110,9 @@
         <div class="causes__item">
           <div class="causes__number">05</div>
           <div class="causes__answer">
-            <h3 class="causes__title">
+            <h4 class="causes__title">
               Развить навыки аналитического мышления
-            </h3>
+            </h4>
             <div class="causes__description">
               Работа с формулами, функциями и большими объемами данных улучшает
               навыки решения проблем и способствует системному подходу к анализу
@@ -124,18 +125,20 @@
 
     <section class="tasks">
       <div class="tasks__left">
-        <h2>Чему вы научитесь</h2>
-        <p>
+        <h3>Чему вы научитесь</h3>
+        <p class="tasks__description">
           Перед вами практический онлайн курс для изучения Excel с самых базовых
-          навыков. Рассмотрим интерфейс, научимся создавать таблицы
+          навыков. Рассмотрим интерфейс, научимся создавать таблицы. Перед вами
+          практический онлайн курс для изучения Excel с самых базовых навыков.
+          Рассмотрим интерфейс, научимся создавать таблицы
         </p>
       </div>
       <div class="tasks__right">
         <div class="tasks__cards">
           <div class="tasks__card card card-1">
-            <div class="card__title">
+            <h4 class="card__title">
               Правильно организовывать данные в таблицы
-            </div>
+            </h4>
             <div class="card__description">
               Поговорим о том, как правильно создавать таблицы и организовывать
               данные внутри них. Рассмотрим принципы работы с большими массивами
@@ -144,9 +147,9 @@
             <img src="./src/img/webp/task-1.webp" />
           </div>
           <div class="tasks__card card card-2">
-            <div class="card__title">
+            <h4 class="card__title">
               Работать с форматами данных и создавать свои
-            </div>
+            </h4>
             <div class="card__description">
               Изучите доступные форматы данных в Excel, научитесь создавать
               собственные пользовательские форматы.
@@ -154,9 +157,9 @@
             <img src="./src/img/webp/task-2.webp" />
           </div>
           <div class="tasks__card card card-3">
-            <div class="card__title">
+            <h4 class="card__title">
               Использовать инструменты преобразования данных
-            </div>
+            </h4>
             <div class="card__description">
               На практических задачах научитесь применять такие инструменты как
               "Сортировка и фильтр", "Найти и заменить" и "Автозаполнение". Эти
@@ -165,7 +168,7 @@
             <img src="./src/img/webp/task-3.webp" />
           </div>
           <div class="tasks__card card card-4">
-            <div class="card__title">Форматировать таблицы</div>
+            <h4 class="card__title">Форматировать таблицы</h4>
             <div class="card__description">
               Научитесь визуально оформлять таблицы для улучшения восприятия
               информации. Правильное форматирование поможет увеличить
@@ -174,7 +177,7 @@
             <img src="./src/img/webp/task-3.webp" />
           </div>
           <div class="tasks__card card card-5">
-            <div class="card__title">Применять формулы и функции</div>
+            <h4 class="card__title">Применять формулы и функции</h4>
             <div class="card__description">
               Изучите основные принципы работы с формулами и функциями,
               научитесь использовать разные типы ссылок, создавать сложные
@@ -186,7 +189,7 @@
       </div>
     </section>
 
-    <!-- <script src="./src/js/gsap.min.js"></script> -->
+    <script src="./src/js/gsap.min.js"></script>
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>

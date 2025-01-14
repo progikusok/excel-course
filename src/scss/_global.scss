@@ -4,11 +4,11 @@ body {
 }
 
 body {
-	font-family: "menoa";
+	font-family: "Inter";
 	background: var(--background);
 	color: var(--text);
 
-	@include base-text;
+	@include large-text;
 	line-height: 1.4;
 
 	transition:
@@ -18,18 +18,26 @@ body {
 
 h1 {
 	@include h1;
+	line-height: 95%;
+	letter-spacing: -4.8px;
 }
 
 h2 {
 	@include h2;
+	line-height: 97%;
+	letter-spacing: -3px;
 }
 
 h3 {
 	@include h3;
+	line-height: 97%;
+	letter-spacing: -2.4px;
 }
 
 h4 {
 	@include h4;
+	line-height: 140%;
+	letter-spacing: -1.2px;
 }
 
 h5 {
@@ -40,18 +48,22 @@ h6 {
 	@include h6;
 }
 
-p {
-	@include base-text;
-}
-
 button {
-	padding: 15px 30px;
+	padding: 24px 36px;
 	width: fit-content;
+
+	font-size: var(--heading-h5);
 
 	transition:
 		0.2s opacity ease,
 		0.2s scale ease;
 	cursor: pointer;
+
+	@include width-less-than(600) {
+		padding: 15px 24px;
+		width: 100%;
+		height: 56px;
+	}
 
 	@include hover() {
 		opacity: 0.9;

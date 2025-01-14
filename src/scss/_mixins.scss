@@ -27,7 +27,7 @@
     inset: -2px;
     content: "";
     border: var(--main-border);
-    border-width: 3px;
+    border-width: 4px;
     border-color: var(--excel);
     pointer-events: none;
   }
@@ -35,10 +35,10 @@
   &::after {
     position: absolute;
     content: "";
-    bottom: -4px;
-    right: -4px;
-    width: 8px;
-    height: 8px;
+    bottom: -6px;
+    right: -6px;
+    width: 12px;
+    height: 12px;
     border: 1px solid var(--background);
     background-color: var(--excel);
   }
@@ -126,4 +126,10 @@
 @mixin small-text {
   font-size: var(--small-text);
   line-height: 1.4;
+}
+
+@mixin large-text {
+  font-size: var(--large-text);
+  line-height: 1.4;
+  letter-spacing: -0.6px;
 }
