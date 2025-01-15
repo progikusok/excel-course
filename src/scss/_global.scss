@@ -79,3 +79,10 @@ button {
 		opacity: 1;
 	}
 }
+
+.typewriter {
+	font-size: 2rem;
+	position: relative;
+	display: inline-block;
+	border-right: 2px solid var(--text);
+}

@@ -49,6 +49,10 @@
     content: "";
     margin-bottom: 2rem;
 
+    @include width-less-than(1100) {
+      display: none;
+    }
+
     &::after {
       background-color: black;
       width: 100%;

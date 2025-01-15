@@ -1,5 +1,6 @@
 import "../scss/style.scss";
 import { DotGrid } from "./dots.js";
+import { Typewriter } from "./typewriter.js";
 
 // produceCelledBlockLogic();
 
@@ -88,4 +89,14 @@ function doMagic() {
 
 new DotGrid("sketch").init();
 
-new SvgSwitcher("svg-switcher");
+// new SvgSwitcher("svg-switcher");
+
+new Typewriter("intro-typewriter", [
+  "=СУММ",
+  "=MAKC",
+  "=ECЛИ",
+  "=СЧЕТ",
+  "=CЦЕП",
+  "=КОРРЕЛ",
+  "=СРЗНАЧ",
+]);
