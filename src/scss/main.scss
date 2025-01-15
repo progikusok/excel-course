@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
 
-  min-height: calc(var(--min-h-section) - var(--layout-padding));
+  min-height: calc(var(--min-h-section));
 
   position: relative;
 
@@ -17,7 +17,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 70px;
+    gap: 4.375rem;
     position: relative;
   }
 
@@ -26,6 +26,7 @@
     // mix-blend-mode: exclusion;
 
     padding: 0 var(--inside-padding);
+    margin-bottom: 40px;
 
     @include width-less-than(600) {
       font-size: 44px;
