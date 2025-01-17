@@ -3,8 +3,9 @@
 
   min-height: 400px;
 
-  background-color: var(--background);
-  @include paper-background;
+  background-color: var(--grey);
+  background-image: radial-gradient(transparent 2px, #fff 2px);
+  background-size: 30px 30px;
 
   position: relative;
   z-index: 4;

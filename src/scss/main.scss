@@ -95,6 +95,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  mask-image: linear-gradient(black 10%, rgba(0, 0, 0, 0) 90%);
 }
 
 .dot-canvas {

@@ -58,6 +58,9 @@
     padding-top: 32px;
     padding-bottom: 16px;
 
+    position: relative;
+    z-index: 4;
+
     &::after {
       position: absolute;
       inset: 0;

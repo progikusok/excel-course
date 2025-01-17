@@ -85,4 +85,15 @@ button {
 	position: relative;
 	display: inline-block;
 	border-right: 2px solid var(--text);
+	animation: border-blink 0.5s linear infinite;
+}
+
+@keyframes border-blink {
+	0%,
+	100% {
+		border-color: inherit;
+	}
+	50% {
+		border-color: transparent;
+	}
 }

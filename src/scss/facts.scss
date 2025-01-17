@@ -1,0 +1,131 @@
+.facts {
+  background: var(--background);
+
+  padding: var(--inside-padding);
+  padding-top: 5.625rem;
+  padding-bottom: 5.625rem;
+
+  @include paper-background;
+
+  position: relative;
+  z-index: 4;
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    position: relative;
+
+    @include width-less-than(1100) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include width-less-than(600) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    flex: 1;
+    aspect-ratio: 1;
+    background-color: var(--background);
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: var(--main-border);
+    cursor: default;
+
+    position: relative;
+
+    @include width-less-than(600) {
+      &:nth-child(1) {
+        position: sticky;
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        position: sticky;
+        top: 2rem;
+      }
+
+      &:nth-child(3) {
+        position: sticky;
+        top: 4rem;
+      }
+
+      &:nth-child(4) {
+        position: sticky;
+        top: 6rem;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      inset: 0;
+      background-color: var(--text);
+      content: "";
+      opacity: 0;
+      will-change: opacity;
+      transition: 0.4s opacity ease;
+      z-index: 1;
+
+      @include width-less-than(600) {
+        display: none;
+      }
+    }
+
+    @include hover() {
+      &::before {
+        opacity: 1;
+      }
+
+      .facts__description {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__number {
+    color: var(--excel);
+    z-index: 2;
+  }
+
+  &__icon {
+    max-width: 130px;
+    width: 100%;
+    aspect-ratio: 1;
+    margin: 0 auto;
+  }
+
+  &__short {
+    @include width-less-than(600) {
+      font-weight: 600;
+    }
+  }
+
+  &__description {
+    color: var(--text-invert);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: 0.4s opacity ease;
+    z-index: 2;
+    padding: 1.4rem;
+
+    @include width-less-than(600) {
+      position: relative;
+      inset: unset;
+      color: var(--text);
+      opacity: 1;
+      padding: unset;
+    }
+  }
+}
