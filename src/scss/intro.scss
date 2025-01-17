@@ -25,6 +25,7 @@
   &__typewriter {
     width: 30%;
     text-align: center;
+    font-family: math;
 
     @include width-less-than(1100) {
       flex: 1;

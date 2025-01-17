@@ -3,16 +3,20 @@ export class Typewriter {
   charIndex = 0;
   isTyping = true;
 
+  delayInProgress = false;
+
   constructor(id, texts, animationTime = 100) {
     this.container = document.getElementById(id);
     this.texts = texts;
-
-    console.log(this.container);
 
     setInterval(this.init.bind(this), animationTime);
   }
 
   init() {
+    if (this.delayInProgress) {
+      return;
+    }
+
     if (this.index >= this.texts.length) {
       this.index = 0;
       return;
@@ -35,6 +39,19 @@ export class Typewriter {
       return;
     }
 
+    if (currentString.length === this.container.innerHTML.trim().length) {
+      this.delayInProgress = true;
+      setTimeout(() => {
+        this.delayInProgress = false;
+        this.container.innerHTML = currentString.substring(
+          0,
+          this.charIndex - 1
+        );
+        this.charIndex--;
+      }, 1000);
+      return;
+    }
+
     // Erasing animation
     if (this.charIndex > 0) {
       this.container.innerHTML = currentString.substring(0, this.charIndex - 1);
@@ -45,7 +62,7 @@ export class Typewriter {
     this.isTyping = true; // Switch back to typing mode
     this.index++; // Move to the next string
 
-    if (stringIndex >= textArray.length) {
+    if (this.index >= this.texts.length) {
       this.index = 0; // Reset to the beginning of the array
     }
 

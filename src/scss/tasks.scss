@@ -1,0 +1,141 @@
+.tasks {
+  padding: var(--layout-padding);
+
+  min-height: 400px;
+
+  background-color: var(--background);
+  @include paper-background;
+
+  position: relative;
+  z-index: 4;
+  will-change: transform;
+
+  @include width-less-than(1100) {
+    flex-direction: column;
+  }
+
+  &__container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    padding: var(--inside-padding);
+    padding-top: 5.625rem;
+    padding-bottom: 5.625rem;
+
+    border: var(--main-border);
+
+    @include width-less-than(1100) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    flex: none;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  &__left {
+    display: grid;
+    flex: 1;
+    overflow: hidden;
+
+    --swiper-navigation-size: 1rem;
+    --swiper-navigation-top-offset: 50%;
+    --swiper-navigation-sides-offset: 10px;
+    --swiper-navigation-color: var(--text);
+
+    @include width-less-than(1100) {
+      order: 1;
+    }
+  }
+
+  &__right {
+    display: grid;
+    flex: 1;
+
+    @include width-less-than(1100) {
+      order: 0;
+    }
+  }
+
+  &__images-container-image {
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+  }
+
+  .tasks-cards {
+    width: 100%;
+  }
+
+  .tasks-cards-slide {
+    display: flex;
+
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px 20px;
+    gap: 20px;
+    border: var(--main-border);
+    background-color: var(--background);
+
+    @include width-less-than(600) {
+      padding: 20px 20px 10px;
+    }
+
+    &__title {
+      line-height: 1;
+    }
+  }
+
+  .swiper-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .swiper-navigation {
+    display: flex;
+    gap: 1rem;
+    flex-flow: row nowrap;
+
+    &__btn {
+      position: relative;
+      left: unset;
+      right: unset;
+      top: unset;
+      margin-top: unset;
+      padding: 1rem;
+      border: var(--main-border);
+      scale: 1;
+      transition: scale 0.2s ease;
+
+      &:active {
+        scale: 0.9;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    top: unset;
+    left: unset;
+    right: unset;
+    bottom: unset;
+    width: fit-content;
+    position: relative;
+    font-size: 1rem;
+  }
+
+  .task-images {
+    width: 100%;
+    height: auto;
+
+    &__slide {
+      user-select: none;
+    }
+  }
+}
