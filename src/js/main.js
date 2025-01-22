@@ -2,6 +2,7 @@ import "../scss/style.scss";
 import { DotGrid } from "./dots.js";
 import { Typewriter } from "./typewriter.js";
 import "./slider.js";
+import "./accordion.js";
 
 // produceCelledBlockLogic();
 

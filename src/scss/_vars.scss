@@ -1,16 +1,20 @@
 :root {
 	--background: #f7f7f7;
 	--text: #0e1117;
+	--text-addition-color: #949494;
 	--grey: #ebebeb;
+	--main-border-color: #0e1117;
 
 	--background-invert: #0e1117;
 	--text-invert: #f7f7f7;
+	--text-addition-color-invert: #949494;
+	--main-border-color-invert: #f7f7f7;
 	--grey-invert: #ebebeb;
 
 	--layout-padding: 20px;
 	--inside-padding: 2.5rem;
 	--min-h-section: calc(100vh - var(--layout-padding) * 2);
-	--main-border: 2px solid #000;
+	--main-border: 2px solid var(--main-border-color);
 	--excel: #007642;
 
 	--main-color: #1e1e20;

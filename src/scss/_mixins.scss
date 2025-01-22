@@ -83,6 +83,7 @@
   @include dark-class-parent() {
     --background: var(--background-invert);
     --text: var(--text-invert);
+    --main-border: 2px solid var(--text);
   }
 }
 
