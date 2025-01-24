@@ -1,0 +1,108 @@
+.author {
+  background: var(--background);
+
+  padding: var(--inside-padding);
+  padding-top: 5.625rem;
+  padding-bottom: 5.625rem;
+
+  position: relative;
+  z-index: 4;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  position: sticky;
+  top: 0;
+
+  min-height: 70vh;
+
+  @include width-less-than(1024) {
+    flex-direction: column;
+  }
+
+  &__left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include width-less-than(1024) {
+      position: relative;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+  }
+
+  &__right-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-self: center;
+    flex: 1;
+
+    padding: 3rem 2rem;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+    max-width: 500px;
+  }
+
+  &__description {
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .line-horizontal {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    content: "";
+    height: 2px;
+    background-color: var(--text);
+  }
+
+  .line-horizontal-bottom {
+    position: absolute;
+    bottom: 4rem;
+    left: 0;
+    width: 100%;
+    content: "";
+    height: 2px;
+    background-color: var(--text);
+  }
+
+  .line-vertical {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    content: "";
+    width: 2px;
+    background-color: var(--text);
+    transform: translateX(-50%);
+
+    @include width-less-than(1024) {
+      left: 50%;
+      bottom: -2rem;
+      top: unset;
+      transform: translateX(-50%);
+      height: 2px;
+      width: 100%;
+      min-width: 100vw;
+    }
+  }
+}
