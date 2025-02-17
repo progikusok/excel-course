@@ -31,6 +31,7 @@ const cardsSwiper = new Swiper(".tasks-cards", {
     el: ".swiper-pagination",
     type: "fraction",
   },
+  loop: true,
   on: {
     activeIndexChange: ({ activeIndex }) => {
       console.log(imagesSwiper);
