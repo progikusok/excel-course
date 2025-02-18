@@ -33,9 +33,8 @@ const cardsSwiper = new Swiper(".tasks-cards", {
   },
   loop: true,
   on: {
-    activeIndexChange: ({ activeIndex }) => {
-      console.log(imagesSwiper);
-      imagesSwiper.slideTo(activeIndex);
+    activeIndexChange: ({ realIndex }) => {
+      imagesSwiper.slideTo(realIndex);
     },
   },
 });
