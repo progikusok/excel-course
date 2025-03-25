@@ -51,36 +51,6 @@
   overflow: hidden;
 }
 
-.celled-block {
-  display: grid;
-  grid-template-columns: repeat(var(--columns), calc(100vw / var(--columns)));
-
-  &__item {
-    width: calc(100vw / var(--columns));
-    aspect-ratio: 1;
-    display: block;
-    cursor: pointer;
-
-    background: green;
-    opacity: 0;
-
-    // background-color: green;
-    // opacity: 0;
-
-    transition: opacity 0.2s;
-    // // animation: bg 2s;
-
-    // // animation-play-state: paused;
-
-    // &:hover {
-    //   transition: opacity 0.1s;
-    //   opacity: 1;
-    //   animation: bg 2s 0.5s;
-    //   // animation-play-state: running;
-    // }
-  }
-}
-
 @keyframes bg {
   100% {
     opacity: 0;

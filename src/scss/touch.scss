@@ -1,0 +1,43 @@
+.touch {
+  background: var(--background);
+
+  padding: var(--inside-padding);
+  padding-top: 5.625rem;
+  padding-bottom: 5.625rem;
+
+  position: relative;
+  z-index: 4;
+
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  min-height: 100vh;
+
+  @include width-less-than(1024) {
+    flex-direction: column;
+  }
+
+  &__left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include width-less-than(1024) {
+      position: relative;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+  }
+
+  &__celled {
+    position: absolute;
+    inset: 0;
+  }
+}

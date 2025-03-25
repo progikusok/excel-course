@@ -3,46 +3,12 @@ import { DotGrid } from "./dots.js";
 import { Typewriter } from "./typewriter.js";
 import "./slider.js";
 import "./accordion.js";
-
-// produceCelledBlockLogic();
-
-// window.addEventListener("resize", produceCelledBlockLogic);
-
-function produceCelledBlockLogic() {
-  const celledBlock = document.getElementsByClassName("celled-block")[0];
-
-  celledBlock.innerHTML = "";
-
-  const containerDimensions = {
-    w: celledBlock.clientWidth,
-    h: celledBlock.clientHeight,
-  };
-
-  const numInRow = 15;
-
-  const cellSize = containerDimensions.w / numInRow;
-
-  const numInColumn = Math.floor(containerDimensions.h / cellSize);
-
-  celledBlock.style.setProperty("--cell-size", cellSize);
-  celledBlock.style.setProperty("--columns", numInRow);
-
-  const spans = Array.from({ length: numInRow * numInColumn }).map(() => {
-    const span = document.createElement("span");
-    span.setAttribute("class", "celled-block__item");
-
-    return span;
-  });
-
-  celledBlock.append(...spans);
-
-  console.log(celledBlock.clientWidth, containerDimensions, spans);
-}
+// import "./trail.js";
 
 import { GooCursor } from "./cursor.js";
 import { SvgSwitcher } from "./svg-switcher.js";
 
-const cursorEl = document.querySelector(".cursor");
+// const cursorEl = document.querySelector(".cursor");
 
 // Initialize cursor
 // const goo = new GooCursor(cursorEl);
@@ -102,3 +68,40 @@ new Typewriter("intro-typewriter", [
   "=КОРРЕЛ",
   "=СРЗНАЧ",
 ]);
+
+// setTimeout(() => {
+//   produceCelledBlockLogic();
+// }, 1000);
+
+// window.addEventListener("resize", produceCelledBlockLogic);
+
+function produceCelledBlockLogic() {
+  const celledBlock = document.getElementsByClassName("celled-block")[0];
+
+  celledBlock.innerHTML = "";
+
+  const containerDimensions = {
+    w: celledBlock.clientWidth,
+    h: celledBlock.clientHeight,
+  };
+
+  const numInRow = 25;
+
+  const cellSize = containerDimensions.w / numInRow;
+
+  const numInColumn = Math.floor(containerDimensions.h / cellSize);
+
+  celledBlock.style.setProperty("--cell-size", cellSize);
+  celledBlock.style.setProperty("--columns", numInRow);
+
+  const spans = Array.from({ length: numInRow * numInColumn }).map(() => {
+    const span = document.createElement("span");
+    span.setAttribute("class", "celled-block__item");
+
+    return span;
+  });
+
+  celledBlock.append(...spans);
+
+  console.log(spans, numInColumn, numInRow);
+}
