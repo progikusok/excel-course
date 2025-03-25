@@ -3,7 +3,6 @@ import { DotGrid } from "./dots.js";
 import { Typewriter } from "./typewriter.js";
 import "./slider.js";
 import "./accordion.js";
-// import "./trail.js";
 
 import { GooCursor } from "./cursor.js";
 import { SvgSwitcher } from "./svg-switcher.js";

@@ -46,6 +46,24 @@ export default defineConfig({
       }),
       apply: "serve",
     },
+    // {
+    //   name: "build-html",
+    //   apply: "build",
+    //   transformIndexHtml: (html) => {
+    //     return {
+    //       html,
+    //       tags: [
+    //         {
+    //           tag: "script",
+    //           attrs: {
+    //             src: "./src/js/trail.js",
+    //           },
+    //           injectTo: "body",
+    //         },
+    //       ],
+    //     };
+    //   },
+    // },
   ],
   build: {
     rollupOptions: {
