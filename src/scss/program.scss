@@ -65,6 +65,8 @@
   border-color: var(--main-border-color-invert);
   border-bottom: none;
 
+ 
+
   &:last-child {
     border-bottom: var(--main-border);
     border-color: var(--main-border-color-invert);
@@ -103,6 +105,10 @@
     padding: 1.5rem;
     cursor: pointer;
 
+    &::-webkit-details-marker {
+      display: none;
+    }
+
     @include hover() {
       .accordion__summary-icon {
         background-color: var(--text);
@@ -140,6 +146,7 @@
 
   &__summary-icon {
     width: 2.5rem;
+    min-width: 40px;
     aspect-ratio: 1;
     justify-self: flex-end;
     display: flex;

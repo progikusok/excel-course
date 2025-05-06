@@ -1,8 +1,21 @@
 import "../scss/style.scss";
 import { DotGrid } from "./dots.js";
 import { Typewriter } from "./typewriter.js";
+import "./utils.js";
+import "./scroll-timeline.js";
 import "./slider.js";
 import "./accordion.js";
+
+document.documentElement.style.setProperty(
+  "--vh",
+  `${window.innerHeight * 0.01}px`
+);
+// window.addEventListener("resize", () => {
+//   document.documentElement.style.setProperty(
+//     "--vh",
+//     `${window.innerHeight * 0.01}px`
+//   );
+// });
 
 new DotGrid("sketch").init();
 
@@ -36,7 +49,7 @@ function formSubmit(e) {
   e.preventDefault();
   const formData = new FormData(e.target);
 
-  fetch("https://formsubmit.co/ad76805decd7b4c7e6706f11a8ff1e50", {
+  fetch("https://formsubmit.co/210af3bfe186ea6b44f9c2096250731f", {
     method: "POST",
     body: formData,
     headers: {

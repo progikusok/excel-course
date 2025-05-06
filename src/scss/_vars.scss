@@ -1,3 +1,5 @@
+@use "functions" as *;
+
 :root {
 	--background: #f7f7f7;
 	--text: #0e1117;
@@ -13,7 +15,7 @@
 
 	--layout-padding: 20px;
 	--inside-padding: 2.5rem;
-	--min-h-section: calc(100vh - var(--layout-padding) * 2);
+	--min-h-section: calc(#{vh(100)} - var(--layout-padding) * 2);
 	--main-border: 2px solid var(--main-border-color);
 	--excel: #007642;
 

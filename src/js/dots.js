@@ -4,8 +4,8 @@ export class DotGrid {
 
     this.measureDimensions();
 
-    this.mouseX = 0;
-    this.mouseY = 0;
+    this.mouseX = window.innerWidth / 2;
+    this.mouseY = window.innerHeight / 2;
   }
 
   measureDimensions() {

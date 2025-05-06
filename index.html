@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="UTF-8" />
     <base href="./" />
 
@@ -71,6 +72,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+
   </head>
   <body>
 
@@ -365,8 +367,8 @@
         </p>
       </div>
       <div class="contains__right">
-        <div class="contains__cards">
-          <div class="contains__card card card-1">
+        <div class="contains__cards js-stack-cards resize-stack-cards">
+          <div class="contains__card card card-1 js-stack-cards__item">
             <h4 class="card__title">Теории</h4>
             <div class="card__description">
               В составе курса находится теория в текстовом виде с короткими
@@ -376,7 +378,7 @@
             </div>
             <img src="./src/img/webp/contains-1.webp" />
           </div>
-          <div class="contains__card card card-2">
+          <div class="contains__card card card-2 js-stack-cards__item">
             <h4 class="card__title">Тестовых заданий</h4>
             <div class="card__description">
               На протяжении курса вам будет предложено пройти более 30 тестовых
@@ -384,7 +386,7 @@
             </div>
             <img src="./src/img/webp/contains-2.webp" />
           </div>
-          <div class="contains__card card card-3">
+          <div class="contains__card card card-3 js-stack-cards__item">
             <h4 class="card__title">Практических заданий</h4>
             <div class="card__description">
               Курс включает более 60 практических заданий, которые будут
@@ -866,7 +868,7 @@
   
             <!-- Hidden Required Fields -->
             <input type="hidden" style="display:none !important" name="project_name" value="Excel Course">
-            <input type="hidden" style="display:none !important" name="admin_email" value="moyomylo11@gmail.com">
+            <input type="hidden" style="display:none !important" name="admin_email" value="boostexcel@yandex.ru">
             <input type="hidden" style="display:none !important" name="form_subject" value="Excel Course Submission">
             <input type="hidden" style="display:none !important" name="_captcha" value="false">
             <input type="hidden" name="_subject" value="Excel Course Submission">
@@ -911,6 +913,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
     <script src="/trail.js"></script>
+    <script src="/util.js"></script>
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>

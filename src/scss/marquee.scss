@@ -23,6 +23,10 @@
 
   overflow: clip;
 
+  @include width-less-than(1100) {
+    min-height: 200px;
+  }
+
   &__wrapper {
     overflow: clip;
     width: 100%;
