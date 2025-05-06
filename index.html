@@ -844,6 +844,39 @@
       
       <div class="touch__celled" id="celledCanvasContainer">
       </div>
+
+      <div class="touch__left">
+        <div class="touch__form-wrapper">
+          <form class="touch__form" method="POST" accept-charset="UTF-8" enctype="multipart/form-data" id="touch-form">
+            <div class="touch__form-block">
+              <label class="touch__label" for="name">Имя</label>
+              <input class="touch__control" type="text" name="name" placeholder="Иван Иванов" required minlength="2">
+            </div>
+            <div class="touch__form-block">
+              <label class="touch__label" for="email">Email</label>
+              <input class="touch__control" type="email" name="email" placeholder="email@email.ru" required>
+            </div>
+            <div class="touch__form-block">
+              <label class="touch__label" for="message">Комментарий</label>
+              <textarea class="touch__control touch__textarea" name="message" placeholder="Комментарий" rows="5"></textarea>
+            </div>
+            <!-- add hidden Honeypot input to prevent spams -->
+            <input type="hidden" name="_gotcha" style="display:none !important">
+  
+            <!-- Hidden Required Fields -->
+            <input type="hidden" style="display:none !important" name="project_name" value="Excel Course">
+            <input type="hidden" style="display:none !important" name="admin_email" value="moyomylo11@gmail.com">
+            <input type="hidden" style="display:none !important" name="form_subject" value="Excel Course Submission">
+            <!-- END Hidden Required Fields -->
+            
+            <button class="touch__button primary" type="submit">Отправить</button>
+          </form>
+
+          <div class="touch__success" id="touch-form-success">
+              <p>Спасибо!</p>
+            </div>
+        </div>
+      </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>

@@ -4,7 +4,7 @@ const COLOR_R = 0;
 const COLOR_G = 118;
 const COLOR_B = 66;
 const STARTING_ALPHA = 200;
-const BACKGROUND_COLOR = 255;
+const BACKGROUND_COLOR = 247;
 const PROB_OF_NEIGHBOR = 0.5;
 const AMT_FADE_PER_FRAME = 5;
 
