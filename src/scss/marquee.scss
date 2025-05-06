@@ -1,0 +1,52 @@
+.marquee {
+  padding: var(--inside-padding);
+  padding-left: 0;
+  padding-right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // gap: 2rem;
+
+  min-height: 400px;
+
+  @include apply-inverted();
+
+  background-color: var(--background);
+  color: var(--text);
+
+  padding-top: 5.625rem;
+  padding-bottom: 5.625rem;
+
+  z-index: 4;
+  position: relative;
+
+  overflow: clip;
+
+  &__wrapper {
+    overflow: clip;
+    width: 100%;
+    padding: 2rem 0;
+  }
+  
+  
+  &__track {
+
+    display: flex;
+    gap: 2rem;
+    line-height: 4.5;
+    width: max-content;
+
+    will-change: transform;
+    padding-left: 2rem;
+
+    animation: marquee 10s linear infinite;
+  }
+}
+
+
+@keyframes marquee {
+  to {
+      transform: translateX(-50%)
+  }
+}

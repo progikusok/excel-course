@@ -20,6 +20,7 @@
 @import "program";
 @import "author";
 @import "touch";
+@import "marquee";
 
 html {
   @include width-between-property(font-size, 1440, 16, 2560, 28, false, true);

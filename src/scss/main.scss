@@ -46,7 +46,8 @@
 
 
     opacity: 0;
-    height: 40px;
+    height: 40px !important;
+    width: fit-content !important;
     font-size: 18px !important;
     display: flex;
     justify-content: center;

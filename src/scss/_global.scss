@@ -61,6 +61,8 @@ button, a.button-link {
 		0.2s scale ease;
 	cursor: pointer;
 
+	text-align: center;
+
 	@include width-less-than(600) {
 		padding: 15px 24px;
 		width: 100%;
