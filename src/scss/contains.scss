@@ -124,6 +124,8 @@
   padding: 40px 40px 20px;
   gap: 20px;
   border: var(--main-border);
+  background-color: var(--background);
+
 
   @include width-less-than(600) {
     padding: 20px 20px 10px;
@@ -138,7 +140,6 @@
     inset: 0;
     content: "";
     transform: translate(-10px, -10px);
-    background-color: var(--excel);
     background-color: var(--background);
     z-index: -1;
   }

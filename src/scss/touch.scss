@@ -86,7 +86,7 @@
     padding: 16px 20px;
     font-size: 18px;
     font-family: inherit;
-    background-color: rgba(var(--background), 0.5);
+    background-color: var(--background);
     
     @include width-less-than(1024) {
       min-width: auto;
