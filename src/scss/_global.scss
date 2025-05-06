@@ -48,11 +48,13 @@ h6 {
 	@include h6;
 }
 
-button {
+button, a.button-link {
 	padding: 24px 36px;
 	width: fit-content;
 
 	font-size: var(--heading-h5);
+
+	text-decoration: none;
 
 	transition:
 		0.2s opacity ease,
