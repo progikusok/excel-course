@@ -22,6 +22,7 @@
 @import "author";
 @import "touch";
 @import "marquee";
+@import "footer";
 
 html {
   @include width-between-property(font-size, 1440, 16, 2560, 28, false, true);
