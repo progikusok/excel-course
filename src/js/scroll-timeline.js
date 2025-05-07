@@ -1,3 +1,5 @@
+import { element } from "three/tsl";
+
 // Tutorial - https://codyhouse.co/tutorials/how-stacking-cards
 (function () {
   var StackCards = function (element) {
@@ -79,8 +81,24 @@
       if (isNaN(element.marginY)) {
         element.items[i].style.transform = "none;";
       } else {
+        // console.log(
+        //   ">>> stackCardsScrolling",
+        //   element.items[i].style.transform.split(" ")[1]
+        // );
+
+        // const scroll =
+        //   element.cardTop -
+        //   element.items[i].getBoundingClientRect().top -
+        //   i * (element.cardHeight + element.marginY);
+        // const scaling =
+        //   i == element.items.length - 1
+        //     ? 1
+        //     : (element.cardHeight - scroll * 0.05) / element.cardHeight;
         element.items[i].style.transform =
-          "translateY(" + element.marginY * i + "px)";
+          "translateY(" +
+          element.marginY * i +
+          "px)" +
+          element.items[i].style.transform.split(" ")[1];
       }
     }
   }
@@ -122,9 +140,24 @@
       return;
     }
 
+    const progress = Math.min(
+      1,
+      Math.max(
+        0,
+        (window.scrollY - this.elementHeight - window.innerHeight) /
+          this.elementHeight
+      )
+    );
+
+    document
+      .getElementById("contains-progress-id")
+      .style.setProperty("--progress", progress);
+
     for (var i = 0; i < this.items.length; i++) {
       // use only scale
+
       var scrolling = this.cardTop - top - i * (this.cardHeight + this.marginY);
+
       if (scrolling > 0) {
         var scaling =
           i == this.items.length - 1

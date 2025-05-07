@@ -101,3 +101,15 @@ button, a.button-link {
 		border-color: transparent;
 	}
 }
+
+.medium-zoom--opened .medium-zoom-overlay {
+	opacity: 0.8 !important;
+}
+
+.medium-zoom-overlay {
+	z-index: 99999;
+}
+
+.medium-zoom-image {
+	z-index: 99999;
+}

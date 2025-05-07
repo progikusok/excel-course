@@ -5,6 +5,7 @@ import {
   EffectCards,
   EffectFade,
 } from "swiper/modules";
+import mediumZoom from "medium-zoom";
 
 const imagesSwiper = new Swiper(".task-images", {
   modules: [EffectFade],
@@ -12,16 +13,18 @@ const imagesSwiper = new Swiper(".task-images", {
   fadeEffect: {
     crossFade: true,
   },
+  on: {
+    click: (swiper) => {
+      const zoom = mediumZoom(swiper.clickedSlide.querySelector("img")).open();
+      zoom.on("closed", () => zoom.detach(), { once: true });
+    },
+  },
   allowTouchMove: false,
 });
 
 const cardsSwiper = new Swiper(".tasks-cards", {
   modules: [Navigation, Pagination],
-  // effect: "cards",
   grabCursor: true,
-  // cardsEffect: {
-  //   slideShadows: false,
-  // },
   spaceBetween: 30,
   navigation: {
     nextEl: ".swiper-button-next",

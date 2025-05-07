@@ -9,12 +9,6 @@ document.documentElement.style.setProperty(
   "--vh",
   `${window.innerHeight * 0.01}px`
 );
-// window.addEventListener("resize", () => {
-//   document.documentElement.style.setProperty(
-//     "--vh",
-//     `${window.innerHeight * 0.01}px`
-//   );
-// });
 
 new DotGrid("sketch").init();
 
@@ -48,7 +42,7 @@ function formSubmit(e) {
   e.preventDefault();
   const formData = new FormData(e.target);
 
-  fetch("https://formsubmit.co/210af3bfe186ea6b44f9c2096250731f", {
+  fetch("https://formsubmit.co/boostexcel@yandex.ru", {
     method: "POST",
     body: formData,
     headers: {
