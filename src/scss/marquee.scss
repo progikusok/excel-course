@@ -35,7 +35,7 @@
 
   &__track {
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     line-height: 4.5;
     width: max-content;
 
@@ -43,6 +43,18 @@
     padding-left: 2rem;
 
     animation: marquee 40s linear infinite;
+
+    h3 {
+      position: relative;
+      &::after {
+        position: absolute;
+        top: 50%;
+        font-size: 2rem;
+        right: -2.5rem;
+        content: "•";
+        transform: translateY(-50%);
+      }
+    }
   }
 }
 
