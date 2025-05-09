@@ -42,7 +42,7 @@ function formSubmit(e) {
   e.preventDefault();
   const formData = new FormData(e.target);
 
-  fetch("https://formsubmit.co/boostexcel@yandex.ru", {
+  fetch("https://formsubmit.co/210af3bfe186ea6b44f9c2096250731f", {
     method: "POST",
     body: formData,
     headers: {
